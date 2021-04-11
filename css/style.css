@@ -62,7 +62,7 @@ h1.head{
 div.column{
 	text-align: left;
 	margin-left: auto;
-  	margin-right: auto;
+	margin-right: auto;
 	padding: 0px 5% 0px 5%;
 	flex-basis: 25%;
 	flex-grow: 0;
@@ -150,56 +150,54 @@ div.spacing{
 		padding: 0;
 		stroke: black;
 		outline: none;
-	  }
-	  
+		}
+
 .buttonbook:hover{
 		cursor: pointer;
 		filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.45));
-	  }
+		}
 .buttonbook:active{
 		filter: none;
 		transform: scale(.95);
-	  }
-
-
+		}
 
 
 /* form style starts*/
 
 input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  font-family: 'Alegreya', serif;
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	font-family: 'Alegreya', serif;
 }
 
 input[type=submit] {
-  background-color: #4A4E69;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Alegreya', serif;
+	background-color: #4A4E69;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Alegreya', serif;
 }
 
 input[type=submit]:hover {
-  background-color: #C9ADA7;
-  font-family: 'Alegreya', serif;
+	background-color: #C9ADA7;
+	font-family: 'Alegreya', serif;
 }
 
 .container {
-  border-radius: 5px;
-  background-color: #F2E9E4;
-  padding: 20px;
-  margin: 10px 200px 25px 200px;
-  font-family: 'Alegreya', serif;
+	border-radius: 5px;
+	background-color: #F2E9E4;
+	padding: 20px;
+	margin: 10px 200px 25px 200px;
+	font-family: 'Alegreya', serif;
 }
 
 /* form style ends*/
@@ -451,6 +449,6 @@ footer{
 
 .team-item{
 	width: 400px;
-  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin: 0 25px 0 25px;  
 }
