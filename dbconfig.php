@@ -1,6 +1,6 @@
 <?php
 define('DBHOST', 'localhost');
-define('DBNAME', 'book');
+define('DBNAME', 'booking');
 define('DBUSER', 'root');
 define('DBPASS', '');
 ?>

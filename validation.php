@@ -12,15 +12,15 @@ function the_results()
         if ($valid == true)
         {
             ?>
-        <div class="results">
-            <!-- <p class="result-text">Your first and last name is <?php echo $_POST["fname"]." ".$_POST["lname"]?></p>
-            <p class="result-text">Your phone number <?php echo $_POST["phone"]?></p> -->
-            <p class="result-text">Your email address is <?php echo $_POST["email"]?></p>
-            <!-- <p class="result-text">Your appointment is on <?php echo $_POST["date"]." at ".$_POST["time"]." for ".$_POST["occupants"]?></p> -->
-            <p class="result-text">Your favourite date is: <?php echo $_POST["date"] ?></p>
-        </div>
-    <?php
-    }}
+            <div class="results">
+                <p class="result-text">Your first and last name is <?php echo $_POST["fname"]." ".$_POST["lname"]?></p>
+                <p class="result-text">Your phone number <?php echo $_POST["phone"]?></p>
+                <p class="result-text">Your email address is <?php echo $_POST["email"]?></p>
+                <p class="result-text">Your appointment is on <?php echo $_POST["restaurant_day"]." at ".$_POST["restaurant_tme"]." for ".$_POST["occupants"]."guests"?></p>
+            </div>
+            <?php
+        }
+    }
 }
 
 function validate() {
