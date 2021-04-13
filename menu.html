@@ -2,6 +2,8 @@
 <html lang="en">
 	<head>
 		<title>Hidden Forest Cafe</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
@@ -22,23 +24,16 @@
 	<body>	
 	
 	<div id="wrapper">
-		<div id="mainNav">
-			<header>
-				<a href="index.html">
-				<img src="./logo/hidden-forest-cafe-1x.png" alt="Home" id="logo"/>
-				</a>
-			</header>
-
-			<nav>
-				<div>
-					<ul id="nav_ul">
-						<li><a class="navigation_list_item"  href="index.html">Home</a></li>
-						<li><a class="current_page"  href="menu.html">Menu</a></li>
-						<li><a class="navigation_list_item"  href="contactus.html">Contact us</a></li>
-						<li><a class="navigation_list_item"  href="form.html">Reserve</a></li>
-					</ul>
-				</div>
-			</nav>
+		
+		<div class="topnav" id="myTopnav">
+			
+			<a href="/home.html" class="active">Home</a>
+			<a href="/menu.html">Menu</a>
+			<a href="/contactus.html">Contact Us</a>
+			<a href="/form.html">Reserve</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+			</a>
 		</div>
 
 
@@ -141,12 +136,6 @@
 
 	<div class="footer-basic">
 		<footer>
-			<div class="social">
-				<a href="#"><i class="icon ion-social-instagram"></i></a>
-				<a href="#"><i class="icon ion-social-snapchat"></i></a>
-				<a href="#"><i class="icon ion-social-twitter"></i></a>
-				<a href="#"><i class="icon ion-social-facebook"></i></a>
-			</div>
 
 			<ul class="list-inline">
 				<li class="list-inline-item"><a href="home.html">Home</a></li>
