@@ -7,24 +7,20 @@
 	$emails = [];
 
     include 'database.php';
-    $pdo = db_connect();
-	handle_form_submission();
+	require_once 'validation.php';
 
+    $pdo = db_connect();
+	$valid = validate();
+	handle_form_submission($valid);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Hidden Forest Cafe</title>
-		
-our own fonts 
-
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" />
-		
-		our own logo? 
-
 	</head>	
 	<body>	
 	
@@ -52,23 +48,20 @@ our own fonts
 		</div>
 		
 		<main>
-			<h3>Let's get you booked in</h3>
+			<h3>Please note that we only accept reservations a week in advance.</h3>
 			<div class="container">
 				<form action="form.php" method="post">
-					<label for="fname">First Name
-						<input id="fname" type="text" name="fname" placeholder="Your name..">
+					<label for="full_name">Name
+						<input type="text" name="full_name" placeholder="Your name..">
+						<?php the_validation_message('full_name'); ?>
 					</label>
-			
-					<label for="lname">Last Name
-						<input id="lname" type="text" name="lname" placeholder="Your last name..">
-					</label>
-
-                    <label for="email">Email
-						<input id="email" type="text" name="email" placeholder="Your email">
+					<label for="email">Email
+						<br><input type="text" name="email" placeholder="Your email.."><br>
+						<?php the_validation_message('email'); ?>
 					</label>
 
 					<label for="restaurant_day">Day
-						<select id="restaurant_day" name="restaurant_day">   
+						<select name="restaurant_day">   
 							<option value="Monday">Monday</option>
 							<option value="Tuesday">Tuesday</option>
 							<option value="Wednesday">Wednesday</option>
@@ -80,7 +73,7 @@ our own fonts
 					</label>
 
 					<label for="restaurant_time">Time
-						<select id="restaurant_time" name="restaurant_time">
+						<select name="restaurant_time">
 							<option value="1000AM">9:00 AM</option>
 							<option value="1000AM">9:30 AM</option>
 							<option value="1000AM">10:00 AM</option>
@@ -100,7 +93,7 @@ our own fonts
 					</label>
 
                     <label for="occupants">Occupants
-					<select id="occupants" name="occupants">
+					<select name="occupants">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -109,9 +102,9 @@ our own fonts
 					</select>
 					</label>
 
-					<button id="enter" type="submit" value="Submit" name="Button">Submit</button>
-
+					<button type="submit" value="Submit" name="Button">Submit</button>
 				</form>
+				<?php the_results(); ?>
 			</div>
 		</main>
 		

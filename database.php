@@ -18,23 +18,22 @@ function db_connect() {
     }
 }
 
-function handle_form_submission() {
+function handle_form_submission($valid) {
     global $pdo;
 
-    if($_SERVER["REQUEST_METHOD"] == "POST")
+    if($_SERVER["REQUEST_METHOD"] == "POST" && $valid == true)
     {
-        if(isset($_POST["fname"]) && isset($_POST["lname"]) && isset($_POST["email"]) && isset($_POST["restaurant_day"]) && isset($_POST["restaurant_time"]) && isset($_POST["occupants"])) {
-            $sql = 'INSERT INTO reservation (fname, lname, email, restaurant_day, restaurant_time, occupants) VALUES (:fname, :lname, :email, :restaurant_day, :restaurant_time, :occupants)';
+        if(isset($_POST["full_name"]) && isset($_POST["email"]) && isset($_POST["restaurant_day"]) && isset($_POST["restaurant_time"]) && isset($_POST["occupants"])) {
+            $sql = 'INSERT INTO reservation (full_name, email, restaurant_day, restaurant_time, occupants) VALUES (:full_name, :email, :restaurant_day, :restaurant_time, :occupants)';
             
             $statement = $pdo->prepare($sql);
-            $statement->bindValue(':fname', $_POST["fname"]);
-            $statement->bindValue(':lname', $_POST["lname"]);
+            $statement->bindValue(':full_name', $_POST["full_name"]);
             $statement->bindValue(':email', $_POST["email"]);
             $statement->bindValue(':restaurant_day', $_POST["restaurant_day"]);
             $statement->bindValue(':restaurant_time', $_POST["restaurant_time"]);
             $statement->bindValue(':occupants', $_POST["occupants"]);
 
             $statement->execute();
-            }
+        }
     }
 }
