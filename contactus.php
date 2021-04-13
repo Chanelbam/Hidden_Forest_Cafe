@@ -62,8 +62,7 @@
 					<div class="team-item">
 						<h5 style="margin: 15px; margin-bottom: -5px">Linda</h5>
 						<h6 style="margin: 0px">Co-Owner</h6>
-						<p style="padding-left: 20px; padding-right: 20px;">Eldrin takes care of all of our creatures here at Chimera Cafe. He is the reason we are able to 
-							house such a variety of creatures. Some may also know him as the inventor of our famous Chimera Caramel Late!</p>
+						<p style="padding-left: 20px; padding-right: 20px;">Linda is the second co-owner of the wonderous Hidden Forest Cafe. In her free time she likes to keep the garden around the cafe looking snazzy. She is constantly inventing new desserts and drinks to add to the menu.</p>
 					</div>
 				</div>
 			</div>
