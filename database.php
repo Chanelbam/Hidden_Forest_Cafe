@@ -84,7 +84,7 @@ function the_reservations() {
         foreach($reservation as $values) {
             ?>
                 <div class="results">
-                    <p><?php echo $values["full_name"]; ?> has a reservation on <?php echo $values["restaurant_day"]; ?> on <?php echo $values["restaurant_time"]; ?> for <?php echo $values["occupants"]; ?>.</p>
+                    <p><?php echo $values["full_name"]; ?> has a reservation on <?php echo $values["restaurant_day"]; ?> at <?php echo $values["restaurant_time"]; ?> for <?php echo $values["occupants"]; ?>.</p>
                 </div>
             <?php
         }

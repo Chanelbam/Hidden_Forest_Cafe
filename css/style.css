@@ -8,6 +8,37 @@
 
 */
 
+/* Shared Attributes */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.reserve {
+	left: calc(50%);
+	padding: 1vh;
+}
+
+.reserve:hover {
+	background-color: #EBADBD;
+} 
+
+.video {
+    background-color: #F0E6DE;
+}
+
+#servicesVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+}
+.services {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
 	.topnav a:not(:first-child) {display: none;}
@@ -67,12 +98,25 @@
 	display: none;
 }
 
-
-
 img#logo{
 	height: 150px;
 	width: 150px;
+	animation: wiggle 5s infinite;
+	transition: width 2s;
+	overflow: hidden;
 }
+
+img#logo:hover {
+	width: 200px;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(-10deg);}
+    75% {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
+}
+
 #wrapper{
 	display:flex;
 	flex-direction:column;
@@ -110,7 +154,6 @@ nav a:visited{
 nav a:hover{
 	background-color:#EBADBD;
 }
-
 
 #nav_ul{
 	display:flex;
@@ -172,6 +215,7 @@ h6{
 p, ul, dl{
 	font-family: 'Encode Sans Semi Expanded', sans-serif;
 	font-size: 19px;
+	font-weight: bold;
 }
 
 .main-body{
@@ -208,11 +252,11 @@ a{
 }
 
 a:link{
-	color:#E49273;
+	color:#273C2C;
 }
 
 a:visited{
-	color:#E49273;			
+	color:#273C2C;			
 }
 
 a:hover{
@@ -269,6 +313,8 @@ main{
 
 .footer-basic li {
 	padding:0 10px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .footer-basic ul a {
@@ -322,43 +368,12 @@ main{
 
 div.welcome {
 	text-align: center;
-	width: 100%;
+	width: 100vw;
 	font-family: 'Bubblegum Sans', cursive;
 	color: #273C2C;
 }
 
 
-/* Container needed to position the button. Adjust the width as needed */
-.container {
-	position:relative;
-	width: 100%;
-}
-
-/* Make the image responsive */
-.container img {
-	width: 100%;
-	height: auto;
-}
-
-/* Style the button and place it in the middle of the container/image */
-.container .btn {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	background-color: #273C2C;  
-	color: #E49273;
-	font-size: 16px;
-	padding: 12px 24px;
-	border: none;
-	cursor: pointer;
-	border-radius: 5px;
-}
-
-.container .btn:hover {
-	background-color: #F4b886;
-} 
 
 #main-text-home{
 	flex:1;
@@ -432,3 +447,20 @@ div.column1{
 } 
 /* Menu Ends */
 
+/* Form */
+input,
+select {
+	min-width: 150px;
+	width: 20%;
+	padding: 1vh;
+	border: none;
+	border-radius: 25px;
+	text-align: center;
+}
+
+/* List Style */
+li {
+	margin: 0 auto; 
+	max-width: 850px;
+	text-align: left;
+}
