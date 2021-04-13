@@ -37,3 +37,56 @@ function handle_form_submission($valid) {
         }
     }
 }
+
+function get_all_appointments() {
+    global $pdo;
+    global $reservation;
+    
+    $sql = "SELECT * FROM reservation ORDER BY ID DESC";
+
+    $result = $pdo->query($sql);
+    
+    while ($row = $result -> fetch()) {
+        $reservation[] = $row;
+    }
+}
+
+function get_appointments() {
+    global $pdo;
+    global $reservations;
+
+    $sql = "SELECT * FROM reservation ORDER BY email DESC";
+
+    $result = $pdo->query($sql);
+    
+    while ($row = $result -> fetch()) {
+        if(!in_array($row["email"], $reservations)) {
+            $reservations[] = $row["email"];
+        }
+    }
+}
+
+function the_reservations() {
+    global $filter;
+    global $reservation;
+
+    echo "<div><h2>Current Reservations:</h2>";
+
+    if($reservation==null) {
+        ?>
+            <div class="results">
+                <p>No current reservations.</p>
+            </div>
+        <?php
+    }
+    else 
+    {
+        foreach($reservation as $values) {
+            ?>
+                <div class="results">
+                    <p><?php echo $values["full_name"]; ?> has a reservation on <?php echo $values["restaurant_day"]; ?> on <?php echo $values["restaurant_time"]; ?> for <?php echo $values["occupants"]; ?>.</p>
+                </div>
+            <?php
+        }
+    }
+}

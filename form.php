@@ -4,14 +4,15 @@
     ini_set('display_errors',1);
     error_reporting(-1);
 
-	$emails = [];
-
     include 'database.php';
 	require_once 'validation.php';
 
     $pdo = db_connect();
 	$valid = validate();
 	handle_form_submission($valid);
+
+	get_all_appointments();
+	// get_appointments();
 ?>
 
 <!DOCTYPE html>
@@ -104,14 +105,16 @@
 
 					<button type="submit" value="Submit" name="Button">Submit</button>
 				</form>
-				<?php the_results(); ?>
+				<?php 
+					the_reservations();
+
+				?>
 			</div>
 		</main>
 		
 		<footer>
 			<p>Follow us on social media!</p>
 			<div>
-				our own iconography 
 			</div>
 			<p>©2021 Hidden Forest Cafe .copyright</p>
 		</footer>

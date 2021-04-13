@@ -8,7 +8,6 @@ function validate() {
     $result = true;
     $this_result = false;
     
-
     if($_SERVER['REQUEST_METHOD']== 'POST')
     {
         if(isset($_POST["full_name"]) && isset($_POST["email"])) 
